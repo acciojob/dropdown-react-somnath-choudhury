@@ -17,7 +17,7 @@ const states = [{
 		}]
 	},{
 		name : "Bhopal",
-		description:"DBhopal is a city in the central Indian state of Madhya Pradesh. It's one of India’s greenest city. There are two main lakes, the Upper Lake and the Lower Lake.",
+		description:"DBhopal is a city in the central Indian state of Madhya Pradesh. It\'s one of India\'s greenest city. There are two main lakes, the Upper Lake and the Lower Lake.",
 		landmarks :[{
 			name : "MANIT",
 			description:"Maulana Azad National Institute of Technology Bhopal is a public technical university located in Bhopal, Madhya Pradesh, India. It is part of a group of publicly funded institutions in India known as National Institutes of Technology. ",
@@ -27,7 +27,7 @@ const states = [{
 		}]
 	},{
 		name : "Gwalior",
-		description:"Gwalior is a city in the central Indian state of Madhya Pradesh. It's known for its palaces and temples, including the Sas Bahu Ka Mandir intricately carved Hindu temple. ",
+		description:"Gwalior is a city in the central Indian state of Madhya Pradesh. It\'s known for its palaces and temples, including the Sas Bahu Ka Mandir intricately carved Hindu temple. ",
 		landmarks :[{
 			name : "Ajaypur",
 			description:"Little less known city Ajaypur.",
@@ -35,7 +35,7 @@ const states = [{
 	}]
 },{
 	name : "Jharkhand",
-	description:"Jharkhand is a state in eastern India. It's known for its waterfalls, the elegant Jain temples of Parasnath Hill and the elephants and tigers of Betla National Park.",
+	description:"Jharkhand is a state in eastern India. It\'s known for its waterfalls, the elegant Jain temples of Parasnath Hill and the elephants and tigers of Betla National Park.",
 	city :[{
 		name : "Dhanbad",
 		description:"Dhanbad is the second-most populated city in the Indian state of Jharkhand. It ranks as the 33rd largest city in India and is the 42nd largest million-plus urban agglomeration in India. It is the 96th fastest growing urban area of the world by the City Mayors Foundation.",
@@ -103,7 +103,7 @@ const states = [{
 	}]
 },{
 	name : "Bihar",
-	description:"Bihar is a state in East India, bordering Nepal. It is divided by the River Ganges, which floods its fertile plains. Important Buddhist pilgrimage sites include the Bodhi Tree in Bodhgaya's Mahabodhi Temple, under which the Buddha allegedly meditated.",
+	description:"Bihar is a state in East India, bordering Nepal. It is divided by the River Ganges, which floods its fertile plains. Important Buddhist pilgrimage sites include the Bodhi Tree in Bodhgaya\'s Mahabodhi Temple, under which the Buddha allegedly meditated.",
 	city :[{
 		name : "Patna",
 		description:"Patna is an ancient city that sprawls along the south bank of the Ganges River in Bihar, northeast India.",
