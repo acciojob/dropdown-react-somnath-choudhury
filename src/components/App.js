@@ -141,9 +141,86 @@ const states = [{
 function App() 
 {
 	// Do not alter/remove main div
+	const [selectedStateIndex, setSelectedStateIndex] = useState(0);
+  	const [selectedCityIndex, setSelectedCityIndex] = useState(0);
+  	const [selectedLandmarkIndex, setSelectedLandmarkIndex] = useState(0);
+
+	const handleStateChange = (e) => {
+		const newState = Number(e.target.value)
+		setSelectedStateIndex(newState)
+		setSelectedCityIndex(0)
+		setSelectedLandmarkIndex(0)
+	}
+	
+	const handleCityChange = (e) => {
+		const newCity = Number(e.target.value)
+		setSelectedCityIndex(newCity)
+		setSelectedLandmarkIndex(0)
+	}
+
+	const handleLandmarkChange = (e) => {
+		const newLandmark = Number(e.target.value)
+		setSelectedLandmarkIndex(newLandmark)
+	}
+
+	const currentState = states[selectedStateIndex];
+	const currentCity = currentState.city[selectedCityIndex]
+	const currentLandmark = currentCity.landmarks[selectedLandmarkIndex]
+
 	return (
 	<div id="main">
-		
+		<h1 className="title">Explore States, Cities and Landmarks</h1>
+
+		{/* Dropdowns */}
+		<div className="dropdowns">
+			<div className="dropdown">
+				<label>State:</label>
+				<select id="state" onChange={handleStateChange} value={selectedStateIndex}>
+					{states.map((state, index) => (
+              			<option key={index} value={index}>
+                			{state.name}
+              			</option>
+            		))}
+				</select>
+			</div>
+
+			<div className="dropdown">
+				<label>City:</label>
+				<select id="city" onChange={handleCityChange} value={selectedCityIndex}>
+					{currentState.city.map((city, index) => (
+						<option key={index} value={index}>
+							{city.name}
+						</option>
+					))}
+				</select>
+			</div>
+			<div className="dropdown">
+				<label>Landmark:</label>
+				<select id="landmark" onChange={handleLandmarkChange} value={selectedLandmarkIndex}>
+					{currentCity.landmarks.map((landmark, index) => (
+						<option key={index} value={index}>
+							{landmark.name}
+						</option>
+					))}
+				</select>
+			</div>
+		</div>
+
+		{/* Info cards */}
+		<div className="info-section">
+			<div className="card">
+				<h2 id="state-name">{currentState.name}</h2>
+				<p id="state-description">{currentState.description}</p>
+			</div>
+			<div className="card">
+				<h2 id="city-name">{currentCity.name}</h2>
+				<p id="city-description">{currentCity.description}</p>
+			</div>
+			<div className="card">
+				<h2 id="landmark-name">{currentLandmark.name}</h2>
+				<p id="landmark-description">{currentLandmark.description}</p>
+			</div>
+		</div>
 	</div>
 	);
 }
